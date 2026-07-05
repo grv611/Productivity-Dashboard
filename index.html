@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var savedTheme = localStorage.getItem('theme') || 'light';
+            var root = document.documentElement;
+            if (savedTheme === 'dark') {
+                root.style.setProperty('--pri', '#e5e5e5');
+                root.style.setProperty('--sec', '#000000');
+                root.style.setProperty('--tri1', '#9a9b9b');
+                root.style.setProperty('--tri2', '#424242');
+                root.style.setProperty('--red', '#bfc6cc');
+                root.style.setProperty('--green', '#8a8a8a');
+            } else {
+                root.style.setProperty('--pri', '#000000');
+                root.style.setProperty('--sec', '#e5e5e5');
+                root.style.setProperty('--tri1', '#424242');
+                root.style.setProperty('--tri2', '#9a9b9b');
+                root.style.setProperty('--red', '#8a8a8a');
+                root.style.setProperty('--green', '#bfc6cc');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <nav>
+            <div class="nav-in">
+                <h2>Productivity Dashboard</h2>
+                <div class="theme">
+                    <i class="ri-sun-fill"></i>
+                    <a href="https://github.com/grv611/Productivity-Dashboard"><i class="ri-github-fill"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="allElems">
+            <header>
+                <div class="weather">
+                    <div class="header1">
+                        <h2>5 July, 2026</h2>
+                        <h1>Sunday 1:00 pm</h1>
+                        <h4>Indore (M.P)</h4>
+                    </div>
+
+                    <div class="header2">
+                        <h1>26 °C</h1>
+                        <h2>Light rain</h2>
+                        <h3 class="precipitation">Precipitation: 35%</h3>
+                        <h3 class="humidity">Humidity: 49%</h3>
+                        <h3 class="wind">Wind: 10 km/h</h3>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="allFeatures">
+                <div class="todo elem" id="0">
+                    <img src="images/todo-light.avif" alt="">
+                    <video src="Videos/todo-video.mp4" muted loop autoplay></video>
+                </div>
+                <div class="daily elem" id="1">
+                    <img src="images/daily-planLight.jpg" alt="">
+                    <video src="Videos/daily-plan.mp4" muted loop autoplay></video>
+                </div>
+                <div class="moti elem" id="2">
+                    <img src="images/moti-light.jpg" alt="">
+
+                    <video src="Videos/motivate.mp4" muted loop autoplay></video>
+
+                </div>
+                <div class="pomo elem" id="3">
+                    <img src="images/pomolight.jpeg" alt="">
+                    <video src="Videos/pomo.mp4" muted loop autoplay></video>
+
+                </div>
+                <div class="goals elem" id="4">
+                    <img src="images/goalsLight.avif" alt="">
+                    <video src="Videos/goals.mp4" muted loop autoplay></video>
+
+                </div>
+
+            </div>
+
+            <div class="bg-sky">
+                <img id="first" src="images/sunriseimg.jpg" alt="">
+                <img id="sec" src="images/sunR.gif" alt="">
+            </div>
+        </section>
+
+        <section class="fullElem todo-list-fullpage">
+            <button class="back" id="0"><i class="ri-close-fill"></i></button>
+            <h2>Your Personalised task List</h2>
+            <div class="todo-container">
+                <div class="addTask">
+                    <form>
+
+                        <input id="task-input" type="text" placeholder="Enter Task">
+                        <textarea placeholder="Enter Details" name="" id=""></textarea>
+                        <div class="mark-imp">
+                            <input type="checkbox" name="" id="check">
+                            <label for="check"> Marks as Important!</label>
+                        </div>
+                        <button>Add Task</button>
+                    </form>
+                </div>
+                <div class="allTask">
+
+
+                </div>
+            </div>
+        </section>
+        <section class="fullElem daily-planner-fullpage">
+            <button class="back" id="1"><i class="ri-close-fill"></i></button>
+            <h2>Plan your Day to be more Productivity</h2>
+
+            <div class="day-planner">
+
+            </div>
+
+        </section>
+        <section class="fullElem motivational-fullpage">
+            <button class="back" id="2"><i class="ri-close-fill"></i></button>
+            <div class="motivation-fullPage-container">
+                <div class="motivation-container">
+                    <div class="motivation-wrapper">
+                        <img src="images/icons8-get-quote-100.png" alt="">
+                        <div class="motivation-1">
+                            <h2>Quote of the Day</h2>
+                        </div>
+                        <div class="motivation-2">
+                            <h3></h3>
+                        </div>
+                        <div class="motivation-3">
+                            <h3></h3>
+                        </div>
+                        <button class="new-quote-btn">New Quote</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fullElem pomodoro-fullpage">
+            <button class="back" id="3"><i class="ri-close-fill"></i></button>
+            <h2>Study with me!</h2>
+
+            <h4 class="session">work session</h4>
+            <div class="pomo-time">
+                <h1>25:00</h1>
+                <button class="start-timer">Start</button>
+                <button class="pause-timer">Pause</button>
+                <button class="reset-timer">Reset</button>
+            </div>
+        </section>
+        <section class="fullElem daily-goals-fullpage">
+            <button class="back" id="4"><i class="ri-close-fill"></i></button>
+            <h2>Daily Goals</h2>
+            <h4 class="goals-progress">0 of 0 completed</h4>
+            <div class="daily-container">
+                <div class="addgoals">
+                    <form>
+                        <input id="goals-input" type="text" placeholder="Enter goals">
+                        <textarea placeholder="Enter your goals" name="" id=""></textarea>
+
+                        <button>All Goals</button>
+                    </form>
+                </div>
+                <div class="allgoals">
+                
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
