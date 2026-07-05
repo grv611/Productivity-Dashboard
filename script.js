@@ -74,6 +74,10 @@ function todoList() {
     renderTask()
     form.addEventListener('submit', function (e) {
         e.preventDefault()
+        if (taskInput.value.trim() === '') {
+            alert('Please enter a task')
+            return
+        }
         currentTask.push(
             {
                 task: taskInput.value,
@@ -238,7 +242,7 @@ pomodoro()
 function weatherfunctionality() {
     var apiKey = '87cf32deedd9442793a70453250305'
     var city = 'indore';
-    var bgsky= document.querySelector('.bg-sky ')
+    var bgsky = document.querySelector('.bg-sky ')
     var header1Time = document.querySelector('.header1 h1')
     var header1Date = document.querySelector('.header1 h2')
     var header2Temp = document.querySelector('.header2 h1')
@@ -246,7 +250,7 @@ function weatherfunctionality() {
     var header2precipitation = document.querySelector('.header2 .precipitation')
     var header2humidity = document.querySelector('.header2 .humidity')
     var header2wind = document.querySelector('.header2 .wind')
-    
+
 
 
     var data = null
@@ -299,25 +303,25 @@ function weatherfunctionality() {
 
         if (hours >= 12) {
             header1Time.innerHTML = `${daysOfWeek}, ${String(hours - 12).padStart('2', '0')}:${String(minutes).padStart('2', '0')}:${String(seconds).padStart('2', '0')} PM`
-            if(hours >=12  && hours<15){
+            if (hours >= 12 && hours < 15) {
                 bgsky.querySelector('#first').src = "images/afternoon.jpg"
                 bgsky.querySelector('#sec').src = "images/afternoom.gif"
-            }else if(hours>=15 && hours<17){
+            } else if (hours >= 15 && hours < 17) {
                 bgsky.querySelector('#first').src = "images/eveningimg.avif"
                 bgsky.querySelector('#sec').src = "images/sunset.webp"
             }
-            else{
+            else {
                 bgsky.querySelector('#first').src = "images/night.jpg"
                 bgsky.querySelector('#sec').src = "images/nightmoon.gif"
             }
-            
+
         } else {
             header1Time.innerHTML = `${daysOfWeek}, ${String(hours).padStart('2', '0')}:${String(minutes).padStart('2', '0')}:${String(seconds).padStart('2', '0')} AM`
-            if(hours>=5 && hours<12){
+            if (hours >= 5 && hours < 12) {
                 bgsky.querySelector('#first').src = "images/sunriseimg.jpg"
                 bgsky.querySelector('#sec').src = "images/sunR.gif"
             }
-             else{
+            else {
                 bgsky.querySelector('#first').src = "images/night.jpg"
                 bgsky.querySelector('#sec').src = "images/nightmoon.gif"
             }
@@ -479,6 +483,11 @@ function dailyGoals() {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault()
+
+        if (goalsInput.value.trim() === '') {
+            alert('Please enter a goal')
+            return
+        }
 
         currentgoals.push(
             {
