@@ -148,7 +148,7 @@ function motivationalQuote() {
 
             motivationQuote.innerHTML = data.quote
 
-            motivationAuthor.innerHTML = `__${data.author}`
+            motivationAuthor.innerHTML = `--${data.author}`
         } catch (err) {
             motivationQuote.innerHTML = 'Could not fetch a quote right now. Stay motivated anyway!'
             motivationAuthor.innerHTML = ''
